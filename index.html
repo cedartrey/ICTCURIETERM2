@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Page Directory</title>
+	<style>
+		body {
+			color:antiquewhite
+			font-family: Arial, sans-serif;
+			margin: 30%;
+			background-color: #1f1f1f;
+			width:40%;
+			border: 1px solid white;
+			place-items: center;
+		}
+
+		.page {
+			display: flow-root;
+			margin-bottom: 2rem;
+		}
+
+		.preview {
+			position: relative;
+			float: left;
+			width: 60%;
+			box-sizing: border-box;
+			padding: 12px;
+		}
+
+		.page:nth-of-type(even) .preview {
+			float: right;
+		}
+
+		iframe {
+			display: block;
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			border: 2px solid grey;
+			border-radius: 20px;
+			overflow: hidden;
+		}
+
+		.preview iframe {
+			pointer-events: none;
+		}
+
+		.preview-link {
+			position: absolute;
+			inset: 0;
+			z-index: 1;
+		}
+
+		.file-card {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1rem;
+			border: 1px solid #ccc;
+			padding: 1rem;
+			background-color: #333;
+			color: white;
+			height: 150px;
+			border-radius: 0,0,20px,20px
+		}
+
+		.codespace-hitbox {
+			position: absolute;
+			inset: 0;
+			z-index: 1;
+		}
+
+		.underbox {
+			background-color: #8A7A6A;
+			width: 100%;
+			height: 25%;
+			border: 1px solid white;
+			border-radius: 20px;
+		}
+
+    </style>
+</head>
+<body>
+	<h1 style="color: antiquewhite; text-align: center;">Activity Summary</h1>
+	<section class="page underbox">
+		<div class="preview">
+			<iframe src="HOA3.html" title="HOA3.html" scrolling="no"></iframe>
+			<a class="preview-link" href="HOA3.html" aria-label="Open HOA3.html"></a>
+		</div>
+		<div class="file-card"><span>HOA3.html</span><a class="codespace-hitbox" href="https://github.com/codespaces" aria-label="Open Codespace"></a></div>
+	</section>
+	<section class="page underbox">
+		<div class="preview">
+			<iframe src="placeholder.html" title="placeholder.html" scrolling="no"></iframe>
+			<a class="preview-link" href="placeholder.html" aria-label="Open placeholder.html"></a>
+		</div>
+		<div class="file-card"><span>???.html</span><a class="codespace-hitbox" href="https://github.com/codespaces" aria-label="Open Codespace"></a></div>
+	</section>
+	<section class="page underbox">
+		<div class="preview">
+			<iframe src="placeholder.html" title="placeholder.html" scrolling="no"></iframe>
+			<a class="preview-link" href="placeholder.html" aria-label="Open placeholder.html"></a>
+		</div>
+		<div class="file-card"><span>???.html</span><a class="codespace-hitbox" href="https://github.com/codespaces" aria-label="Open Codespace"></a></div>
+	</section>
+</body>
+</html>
