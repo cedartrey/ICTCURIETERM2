@@ -7,14 +7,16 @@
 </head>
 <body>
     <div class="boim">
-        <h1 class="text">grade 10 curie</h1>
+        <h1 class="text">Hello! What can I do for you today?</h1>
     </div>
 </body>
 <style>
     body {
         margin: 0;
         min-height: 100vh;
-        background: #222;
+        background: linear-gradient(180deg, #000 0%, #000 70%, #b000a4 100%);
+        background-size: 100% 115%;
+        animation: rise-magenta 10s ease-in-out infinite;
     }
 
     .boim {
@@ -39,7 +41,18 @@
         -webkit-background-clip: text;
         color: transparent;
         -webkit-text-fill-color: transparent;
-        animation: drift-dye 14s ease-in-out infinite alternate;
+        animation: drift-dye 7s ease-in-out infinite;
+    }
+
+    @keyframes rise-magenta {
+        0%,
+        100% {
+            background-position: 0% 0%;
+        }
+
+        50% {
+            background-position: 0% 100%;
+        }
     }
 
     @keyframes drift-dye {
@@ -53,6 +66,10 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+        body {
+            animation: none;
+        }
+
         .text {
             animation: none;
         }
